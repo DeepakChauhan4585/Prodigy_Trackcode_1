@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ProDigy Infotech - Task 01</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f4f8;
+      color: #333;
+    }
+
+    /* Navbar */
+    nav {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: transparent;
+      z-index: 1000;
+      transition: background 0.4s ease;
+    }
+
+    nav.scrolled {
+      background: #1e3c72;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    nav .logo {
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 15px;
+      transition: all 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 5px;
+      color: #fff;
+    }
+
+    /* Header / Landing */
+    header {
+      height: 100vh;
+      background: linear-gradient(to right, #1e3c72, #2a5298);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 0 20px;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    header a {
+      background: white;
+      color: #2a5298;
+      padding: 12px 25px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    header a:hover {
+      background: #e0e0e0;
+    }
+
+    /* Gradient Shapes */
+    .shape.square {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(to bottom right, #0072ff, #00c6ff);
+      opacity: 0.5;
+      top: 80%;
+      left: 10%;
+      transform: rotate(45deg);
+    }
+
+    .shape.circle {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #00f2fe, #4facfe);
+      top: 10%;
+      right: 10%;
+      opacity: 0.5;
+    }
+
+    /* Sections */
+    section {
+      padding: 80px 20px;
+    }
+
+    section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+
+    section p,
+    section ul {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+      text-align: left;
+    }
+
+    /* Contact Form */
+    form {
+      max-width: 600px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    form input, form textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    form button {
+      padding: 10px 20px;
+      background-color: #1e3c72;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav {
+        padding: 10px 20px;
+        flex-direction: column;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .shape.square,
+      .shape.circle {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="logo">ProDigy Infotech</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#tasks">Tasks</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Landing / Hero -->
+  <header id="home">
+    <h1>Task-01: Responsive Landing Page</h1>
+    <p>Create an interactive navigation menu with scroll and hover effects.</p>
+    <a href="#tasks">Get Started</a>
+    <div class="shape square"></div>
+    <div class="shape circle"></div>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home-section" style="background: #ffffff;">
+    <h2>Welcome to ProDigy Infotech</h2>
+    <p>We are a leading platform for tech-based internships and projects. Get started with hands-on learning and build real-world skills.</p>
+  </section>
+
+  <!-- Tasks Section -->
+  <section id="tasks" style="background: #f5f7fa;">
+    <h2>Our Tasks</h2>
+    <ul>
+      <li>✅ Task-01: Responsive Landing Page</li>
+      <li>✅ Task-02: Calculator using JavaScript</li>
+      <li>✅ Task-03: Portfolio Website</li>
+      <li>✅ Task-04: To-Do App</li>
+    </ul>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" style="background: #ffffff;">
+    <h2>About Us</h2>
+    <p>ProDigy Infotech is dedicated to offering innovative internship experiences to students and learners around the globe. Our mission is to bridge the gap between learning and real-world development.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" style="background: #f5f7fa;">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- JavaScript for Navbar Scroll -->
+  <script>
+    window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
+
+</body>
+</html>
